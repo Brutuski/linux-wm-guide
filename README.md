@@ -24,7 +24,7 @@ Some of the different kinds of WM are:
 + Dynamic WM: dynamically change between tiling and floating modes. Some of the popular dynamic WM are:
     + [awesome](https://github.com/awesomeWM/awesome)
     + [dwm](https://github.com/hluk/dwm)
-    +[spectrwm](https://github.com/conformal/spectrwm)
+    + [spectrwm](https://github.com/conformal/spectrwm)
 + Composite WM: all windows are drawn and buffered individually with additonal effects such as 3D animations, blurr, fading etc. Some of the popular composite WM are:
     + Windows WM
     + OS X WM
