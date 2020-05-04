@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is intended to be a simple guide to help anyone get started with a WM in linux. I personally use Arch along with i3-gaps. While setting up everything from scratch, it seemed like a monumental challenge to install and get started with from scratch. For any suggestions, edits or questions start a new [issue](https://github.com/Brutuski/linux-wm-guide/issues).
+This is intended to be a simple guide to help anyone get started with a WM in linux. I personally use Arch along with i3-gaps. While setting up everything from scratch, it seemed like a monumental challenge to install and get started with. For any suggestions, edits or questions start a new [issue](https://github.com/Brutuski/linux-wm-guide/issues).
 
 The example config files shown here are from my own dotfiles. A complete set of all dotfiles can be found [here](https://github.com/Brutuski/Dotfiles). They are formatted and commented to make things easier to understand.
 
@@ -65,7 +65,7 @@ After having extensively used Ubuntu 18.04, I changed over to my current setup:
 
 ## Installation
 
-After having installed the desired OS. (Links top get started with installing [Arch](https://wiki.archlinux.org/index.php/Installation_guide) and [Ubuntu](https://ubuntu.com/desktop)) open up the terminal. On arch you are already on the terminal after a fresh install. On Ubuntu you can either press `Ctrl + Alt + Enter` or simply open it from the Gnome App launcher.
+After having installed the desired OS, (Links top get started with installing [Arch](https://wiki.archlinux.org/index.php/Installation_guide) and [Ubuntu](https://ubuntu.com/desktop)) open up the terminal. On arch you are already on the terminal after a fresh install. On Ubuntu you can either press `Ctrl + Alt + Enter` or simply open it from the Gnome App launcher.
 
 To install i3-gaps simply enter:
 + on Arch: `sudo pacman -S i3-gaps`
@@ -101,7 +101,7 @@ I personally use polybar, there are numerous modules available for both.
 
 A progam launcher is needed as well. [d-menu](https://github.com/stilvoid/dmenu) is a very popular program launcher. Also highly customizable. [rofi](https://github.com/davatorium/rofi) is the other popular alternative and extremely customizable.
 
-Having no full DE and only a WM means your backgrund will be black. [Feh](https://github.com/derf/feh) is a program that can very easily set background images.
+Having no full DE and only a WM means your background will be black. [Feh](https://github.com/derf/feh) is a program that can very easily set background images.
 
 Another essential program would be filemanagers. Some popular graphical filemanagers are [nautilus](https://github.com/GNOME/nautilus), [thunar](https://github.com/xfce-mirror/thunar).
 
@@ -110,7 +110,7 @@ Terminal based filemanagers are also available, [ranger](https://github.com/rang
 
 ## Common Keybidings
 
-i3 uses either  the `Alt` key (referred to as `Mod1`) or the `Win`  key(referred to as `Mod4` in the i3 config) as a `MOD` key. This is configured by the user during initial setup. Can be changed later any any time by editing the following line in the config
+i3 uses either  the `Alt` key (referred to as `Mod1`) or the `Win`  key(referred to as `Mod4` in the i3 config) as a `MOD` key. This is configured by the user during initial setup. Can be changed later any time by editing the following line in the config
 ```
 set $mod Mod<num>
 ```
