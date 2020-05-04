@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This is intended to be a simple guide to help anyone get started with a WM in linux. I personally use Arch along with i3-gaps. While setting up everything from scratch, it seemed like a monumental challenge to install and get started with from scratch.
+This is intended to be a simple guide to help anyone get started with a WM in linux. I personally use Arch along with i3-gaps. While setting up everything from scratch, it seemed like a monumental challenge to install and get started with from scratch. For any suggestions, edits or questions start a new [issue](https://github.com/Brutuski/linux-wm-guide/issues).
 
-The example config files shown here are from my own dotfiles. All of them can be found [here](https://github.com/Brutuski/Dotfiles). They are formatted and commented to make things easier to understand.
+The example config files shown here are from my own dotfiles. A complete set of all dotfiles can be found [here](https://github.com/Brutuski/Dotfiles). They are formatted and commented to make things easier to understand.
 
 Packages and programs mentioned here are available for all linux distros. The configs provided here are verified to work on <img src="https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/arch_logo.png" alt="drawing" width="28"/> Arch but should work on most distros. Some features might require tweaking to work on other distros.
 
