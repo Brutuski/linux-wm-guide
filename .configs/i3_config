@@ -1,0 +1,318 @@
+#  $$$$$$\  $$$$$$\         $$$$$$\   $$$$$$\  $$$$$$$\   $$$$$$\  
+#  \_$$  _|$$ ___$$\       $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
+#    $$ |  \_/   $$ |      $$ /  \__|$$ /  $$ |$$ |  $$ |$$ /  \__|
+#    $$ |    $$$$$ /       $$ |$$$$\ $$$$$$$$ |$$$$$$$  |\$$$$$$\  
+#    $$ |    \___$$\       $$ |\_$$ |$$  __$$ |$$  ____/  \____$$\ 
+#    $$ |  $$\   $$ |      $$ |  $$ |$$ |  $$ |$$ |      $$\   $$ |
+#  $$$$$$\ \$$$$$$  |      \$$$$$$  |$$ |  $$ |$$ |      \$$$$$$  |
+#  \______| \______/        \______/ \__|  \__|\__|       \______/ 
+#
+
+#  _  __          ____  _           _ _                 
+# | |/ /         |  _ \(_)         | (_)                
+# | ' / ___ _   _| |_) |_ _ __   __| |_ _ __   __ _ ___ 
+# |  < / _ \ | | |  _ <| | '_ \ / _` | | '_ \ / _` / __|
+# | . \  __/ |_| | |_) | | | | | (_| | | | | | (_| \__ \
+# |_|\_\___|\__, |____/|_|_| |_|\__,_|_|_| |_|\__, |___/
+#            __/ |                             __/ |    
+#           |___/                             |___/      
+
+# SET MOD KEY!!!
+set $mod Mod1
+
+# Set Windows key
+set $sup Mod4
+
+# MOUSE related settings
+
+# Enable tap to click
+exec_always xinput set-prop 14 335 1
+
+# Right click toggles floating
+#bindsym --whole-window $mod+button2 floating toggle
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+#LAUNCH SHORTCUTS
+# start Tilix
+bindsym $mod+Return exec tilix
+bindsym $mod+t exec texmaker
+bindsym $mod+z exec zathura
+bindsym $mod+f exec ranger
+
+# Start rofi
+bindsym $mod+d exec --no-startup-id rofi -show
+bindsym $sup+w exec --no-startup-id rofi -show window
+
+# Take screenshot using scrot
+bindsym Print exec scrot -e 'mv $f ~/Documents/Pictures/Screenshot'
+
+# Screen brightness with light
+bindsym $mod+Control+k exec light -A 10
+bindsym $mod+Control+j exec light -U 10
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# Powermenu with Rofi
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/rofi/powermenu.sh
+
+# Lock screen using i3lock
+bindsym $mod+F1 exec --no-startup-id i3lock -i ~/Documents/Chrome-Downloads/Lockscreen.png -p default -n
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+Shift+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+#   _____ _             _               
+#  / ____| |           | |              
+# | (___ | |_ __ _ _ __| |_ _   _ _ __  
+#  \___ \| __/ _` | '__| __| | | | '_ \ 
+#  ____) | || (_| | |  | |_| |_| | |_) |
+# |_____/ \__\__,_|_|   \__|\__,_| .__/ 
+#                                | |    
+#                                |_|    
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+# Launch Polybar during startup
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Compton: Shadows + corners
+exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+
+# Set Wallpaper using feh on startup
+exec_always ~/fehbg.sh
+
+# LANGUAGE INPUT
+# Language toggle and other settings in /etc/X11/xorg.conf.d
+exec_always setxkbmap -layout us,de
+
+# Start Dunst
+exec_always --no-startup-id dunst
+
+# Start Wallpaper blur
+exec_always --no-startup-id "~/.config/polybar/scripts/wallblur.sh -i ~/Documents/Chrome-Downloads/Engine.jpg"
+
+# __      ___                 _ 
+# \ \    / (_)               | |
+#  \ \  / / _ ___ _   _  __ _| |
+#   \ \/ / | / __| | | |/ _` | |
+#    \  /  | \__ \ |_| | (_| | |
+#     \/   |_|___/\__,_|\__,_|_|
+
+# Font for window titles.
+font pango:Hack Nerd Mono 8
+
+# GAP VARIABLES
+set $inner 10
+set $outer 0
+
+# SET GAPS
+gaps inner $inner
+gaps outer $outer
+
+# ROUNDED CORNERS
+set $thick 16
+border_radius 10
+
+for_window [class="^.*"] border pixel 1
+
+# Gaps only when there is more than 1 Window in container
+#smart_gaps on
+
+
+# __          __        _                             
+# \ \        / /       | |                            
+#  \ \  /\  / /__  _ __| | _____ _ __   __ _  ___ ___ 
+#   \ \/  \/ / _ \| '__| |/ / __| '_ \ / _` |/ __/ _ \
+#    \  /\  / (_) | |  |   <\__ \ |_) | (_| | (_|  __/
+#     \/  \/ \___/|_|  |_|\_\___/ .__/ \__,_|\___\___|
+#                               | |                   
+#                               |_|                   
+
+# Workspace variables set
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
+set $ws14 "14"
+set $ws15 "15"
+set $ws16 "16"
+set $ws17 "17"
+set $ws18 "18"
+set $ws19 "19"
+set $ws20 "20"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+bindsym $mod+MOD4+1 workspace number $ws11
+bindsym $mod+MOD4+2 workspace number $ws12
+bindsym $mod+MOD4+3 workspace number $ws13
+bindsym $mod+MOD4+4 workspace number $ws14
+bindsym $mod+MOD4+5 workspace number $ws15
+bindsym $mod+MOD4+6 workspace number $ws16
+bindsym $mod+MOD4+7 workspace number $ws17
+bindsym $mod+MOD4+8 workspace number $ws18
+bindsym $mod+MOD4+9 workspace number $ws19
+bindsym $mod+MOD4+0 workspace number $ws20
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+MOD4+Shift+1 move container to workspace number $ws11
+bindsym $mod+MOD4+Shift+2 move container to workspace number $ws12
+bindsym $mod+MOD4+Shift+3 move container to workspace number $ws13
+bindsym $mod+MOD4+Shift+4 move container to workspace number $ws14
+bindsym $mod+MOD4+Shift+5 move container to workspace number $ws15
+bindsym $mod+MOD4+Shift+6 move container to workspace number $ws16
+bindsym $mod+MOD4+Shift+7 move container to workspace number $ws17
+bindsym $mod+MOD4+Shift+8 move container to workspace number $ws18
+bindsym $mod+MOD4+Shift+9 move container to workspace number $ws19
+bindsym $mod+MOD4+Shift+0 move container to workspace number $ws20
+
+# __          ___           _                   
+# \ \        / (_)         | |                  
+#  \ \  /\  / / _ _ __   __| | _____      _____ 
+#   \ \/  \/ / | | '_ \ / _` |/ _ \ \ /\ / / __|
+#    \  /\  /  | | | | | (_| | (_) \ V  V /\__ \
+#     \/  \/   |_|_| |_|\__,_|\___/ \_/\_/ |___/
+
+# Resize windows (mouse can also be used after entering the mode)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Always in floating mode
+#for_window [class="tilix"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="Gnome-calculator"] floating enable
+for_window [class="gedit"] floating enable
+for_window [class="Transmission"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="wicd-client.py"] floating enable
+for_window [class="Matplotlib"] floating enable
+
+
+#     ___      _                
+#    / __\___ | | ___  _ __ ___ 
+#   / /  / _ \| |/ _ \| '__/ __|
+#  / /__| (_) | | (_) | |  \__ \
+#  \____/\___/|_|\___/|_|  |___/
+
+#colors:                border  backgr. text    indicator
+client.focused          #50FA7B #007030 #ffffff #2b2b2b
+client.focused_inactive #FFB86C #2b2b2b #ffffff #2b2b2b
+client.unfocused        #F1FA8C #2b2b2b #ffffff #2b2b2b
+client.urgent           #FF5555 #900000 #ffffff #2b2b2b
