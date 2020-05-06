@@ -44,6 +44,7 @@ bindsym $mod+f exec ranger
 # Start rofi
 bindsym $mod+d exec --no-startup-id rofi -show
 bindsym $sup+w exec --no-startup-id rofi -show window
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/rofi/powermenu.sh
 
 # Take screenshot using scrot
 bindsym Print exec scrot -e 'mv $f ~/Documents/Pictures/Screenshot'
@@ -54,9 +55,6 @@ bindsym $mod+Control+j exec light -U 10
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# Powermenu with Rofi
-bindsym $mod+Shift+s exec --no-startup-id ~/.config/rofi/powermenu.sh
 
 # Lock screen using i3lock
 bindsym $mod+F1 exec --no-startup-id i3lock -i ~/Documents/Chrome-Downloads/Lockscreen.png -p default -n
