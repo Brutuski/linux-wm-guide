@@ -136,7 +136,9 @@ i3 config is located at `.config/i3`
 
 Open it with any editor to edit it. With vim for example `vim .config/i3/config` or using any preferred editor.
 
-Default [i3 config looks like this](https://gist.github.com/Brutuski/91e5a861edfa4ee1b57af33a39aa0934)
+Default i3 config looks like [this](https://gist.github.com/Brutuski/91e5a861edfa4ee1b57af33a39aa0934).
+
+My i3 config file is linked [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/i3_config) as well.
 
 Some useful tips to get started:
 + To comment out a line, type `#` before it.
@@ -164,7 +166,7 @@ Some useful tips to get started:
 
 + Install polybar to show information from various modules. A lot more modules for it can be found [here](https://github.com/TiagoDanin/Awesome-Polybar) and [here](https://github.com/polybar/polybar-scripts).
 
-+ Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). Rofi can also be used for other functionalities, as a powermenu [for example](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/Powermenu.png) or as a [window switch]() as well
++ Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). Rofi can also be used for other functionalities, such as a [Powermenu](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/Powermenu.png) or as a [window switch](https://github.com/Brutuski/linux-wm-guide/blob/master/.image_resources/WindowSwitcher.png) and so on. Scripts for [Powermenu](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/powermenu.sh) and [Window Switcher](https://github.com/Brutuski/linux-wm-guide/blob/f79244aa6e1657fa82a6c4bbbd0cdad5a70c35e5/.configs/i3_config#L47) are linked as well to get started with.
 
 + Install [feh](https://github.com/derf/feh), a lightweight image viewer. Feh also sets wallpapers: `feh --bg-scale /path/to/image.file`
 
@@ -172,6 +174,10 @@ Some useful tips to get started:
 
 + Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc)
 
+## Forums 
+List of some forums to help with questions and customizations:
++ [i3 subreddit](https://wwwreddit.com/r/i3wm/)
++ [Customizations subreddit](https://www.reddit.com/r/unixporn/)
 
 ### Disclaimer
 
@@ -185,5 +191,3 @@ With this guide I hope to share what I have learnt after all the trial and error
 ### License
 
 This Project is licensed under the MIT License - see the [LICENSE](https://github.com/Brutuski/linux-wm-guide/blob/master/LICENSE) file for more details.
-
-
