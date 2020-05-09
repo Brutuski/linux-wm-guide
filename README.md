@@ -177,10 +177,12 @@ Some useful tips to get started:
 
     Rofi can also be used for various other functionalities, such as:
     + Powermenu:     
+
         ![Powermenu](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/powermenu.png) 
     + Window Switcher :
-        ![window-switcher](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/window-switcher.png)
-        
+
+        ![windowswitcher](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/window-switcher.png)
+
     Scripts for [Powermenu](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/powermenu.sh) and [Window Switcher](https://github.com/Brutuski/linux-wm-guide/blob/f79244aa6e1657fa82a6c4bbbd0cdad5a70c35e5/.configs/i3_config#L47) are linked as well to get started with.
 
 + Install [feh](https://github.com/derf/feh), a lightweight image viewer. Feh also sets wallpapers: `feh --bg-scale /path/to/image.file`
