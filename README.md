@@ -9,9 +9,9 @@ The example config files shown here are from my own dotfiles. A complete set of 
 Packages and programs mentioned here are available for all linux distros. The configs provided here are verified to work on <img src="https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/arch_logo.png" alt="drawing" width="28"/> Arch but should work on most distros. Some features might require tweaking to work on other distros.
 
 
-## What is a Windows Manager(wm)?
+## What is a **W**indows **M**anager(WM)?
 
-As the name implies, it is a software that manages the placement and movements of windows. Nothing more.
+As the name implies, a WM is a software that manages the placement and movements of windows. Nothing more.
 
 Some of the different kinds of WM are: 
 + Stacking WM: allow for overlapping floating windows. Some examples of stacking WM are:
@@ -29,13 +29,13 @@ Some of the different kinds of WM are:
     + Windows WM
     + OS X WM
 
-We will be focusing on tiling WM here, in particular i3-wm.
+We will be focusing on tiling WM here, in particular [i3-wm](https://github.com/i3/i3) and it's forks.
 It is very minimal and does not come with any added modules. All further configuration is left to the user's discretion.
 
 
-## Difference between DE and WM
+## Difference between **D**esktop **E**nvironment and WM
 
-A full Desktop Experience comes with a Windows Manager and other modules like a network manager, filemanager and so on.
+A full DE comes with a WM and other modules like a network manager, filemanager and so on.
 
 A WM however lacks such modules and typically is only capable of handling window placements for the most part.
 
@@ -94,6 +94,8 @@ After Installation, restart your PC and once logged in you will be prompted by t
 
 ## Additional Requirements and Recommendations
 
+To get i3 config highlighting in vim, install [i3config vim plugin](https://github.com/mboughaba/i3config.vim). Makes it much easier to visually navigate the config file in vim. For [example](https://github.com/Brutuski/linux-wm-guide/blob/master/.image_resources/i3config_syntax_highlighting.png)
+
 Install a Display Manager like [LightDM](https://github.com/canonical/lightdm). This displays the X server where necessary and runs a greeter allowing the user to login. More information and options for DM is available on [arch wiki](https://wiki.archlinux.org/index.php/display_manager)
 
 To display information on a bar, there are several different programs available. Two of the most popular ones are [i3status](https://github.com/i3/i3status) and [Polybar](https://github.com/polybar/polybar).
@@ -146,12 +148,10 @@ Some useful tips to get started:
 + To set a custom keybinding
     ```
     bindsym $mod+z exec <program name>
-
     ```
 + To always execute a custom script on startup, starting polybar for example 
     ```
     exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
     ```
 + To switch between multiple keyboard layouts, US and German for example (necessary drivers required)
     ```
@@ -164,9 +164,23 @@ Some useful tips to get started:
 
 ## How to procede further
 
-+ Install polybar to show information from various modules. A lot more modules for it can be found [here](https://github.com/TiagoDanin/Awesome-Polybar) and [here](https://github.com/polybar/polybar-scripts).
++ Install polybar to show information from various modules. A lot more modules for it can be found [here](https://github.com/TiagoDanin/Awesome-Polybar) and [here](https://github.com/polybar/polybar-scripts). Polybar can be customized with various themes and color schemes as per the user's setup. 
+    + Example bars: 
+    ![bar1](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/bar1.png)
 
-+ Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). Rofi can also be used for other functionalities, such as a [Powermenu](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/Powermenu.png) or as a [window switch](https://github.com/Brutuski/linux-wm-guide/blob/master/.image_resources/WindowSwitcher.png) and so on. Scripts for [Powermenu](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/powermenu.sh) and [Window Switcher](https://github.com/Brutuski/linux-wm-guide/blob/f79244aa6e1657fa82a6c4bbbd0cdad5a70c35e5/.configs/i3_config#L47) are linked as well to get started with.
+        ![bar2](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/bar2.png)
+
++ Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). 
+
+    My rofi setup:
+        ![rofi](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/rofi.png)
+
+    Rofi can also be used for various other functionalities, such as:
+    + Powermenu:     
+        ![Powermenu](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/powermenu.png) 
+    + Window Switcher :
+        ![window-switcher](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/window-switcher.png)
+    Scripts for [Powermenu](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/powermenu.sh) and [Window Switcher](https://github.com/Brutuski/linux-wm-guide/blob/f79244aa6e1657fa82a6c4bbbd0cdad5a70c35e5/.configs/i3_config#L47) are linked as well to get started with.
 
 + Install [feh](https://github.com/derf/feh), a lightweight image viewer. Feh also sets wallpapers: `feh --bg-scale /path/to/image.file`
 
@@ -176,7 +190,7 @@ Some useful tips to get started:
 
 ## Forums 
 List of some forums to help with questions and customizations:
-+ [i3 subreddit](https://wwwreddit.com/r/i3wm/)
++ [i3 subreddit](https://wwwreddit.com/r/i3wm/), also serves as the official i3 forum.
 + [Customizations subreddit](https://www.reddit.com/r/unixporn/)
 
 ### Disclaimer
