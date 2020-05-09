@@ -1,4 +1,7 @@
 # A Guide to Windows Managers in Linux
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg) 
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Brutuski/linux-wm-guide/blob/master/LICENSE) 
+
 
 ## Introduction
 
@@ -33,7 +36,7 @@ We will be focusing on tiling WM here, in particular [i3-wm](https://github.com/
 It is very minimal and does not come with any added modules. All further configuration is left to the user's discretion.
 
 
-## Difference between **D**esktop **E**nvironment and WM
+## Difference between **D**esktop **E**nvironment(DE) and WM
 
 A full DE comes with a WM and other modules like a network manager, filemanager and so on.
 
@@ -173,7 +176,7 @@ Some useful tips to get started:
 + Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). 
 
     My rofi setup: 
-    
+
     ![rofi](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/rofi.png)
 
     Rofi can also be used for various other functionalities, such as:
