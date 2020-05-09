@@ -173,7 +173,7 @@ Some useful tips to get started:
 + Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). 
 
     My rofi setup: 
-        ![rofi](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/rofi.png)
+    ![rofi](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/rofi.png)
 
     Rofi can also be used for various other functionalities, such as:
     + Powermenu:     
