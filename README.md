@@ -196,10 +196,14 @@ Some useful tips to get started:
     bindsym $mod+F1 exec --no-startup-id i3lock -i ~/path/to/image.png -p default -n
 
     ```
-    My lockscreen: ![lock-screen](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/lock-screen.png)
+    My lockscreen: 
+    
+    ![lock-screen](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/lock-screen.png)
     To unlock, simply start typing the password and press `Enter`
 
-+ Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc). Example image for Dunst ![dunst](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/dunst-notification.png)
++ Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc). Example image for Dunst 
+
+    ![dunst](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/dunst-notification.png)
 
 ## Forums 
 List of some forums to help with questions and customizations:
