@@ -104,9 +104,9 @@ Install a Display Manager like [LightDM](https://github.com/canonical/lightdm). 
 To display information on a bar, there are several different programs available. Two of the most popular ones are [i3status](https://github.com/i3/i3status) and [Polybar](https://github.com/polybar/polybar).
 I personally use polybar, there are numerous modules available for both.
 
-A progam launcher is needed as well. [d-menu](https://github.com/stilvoid/dmenu) is a very popular program launcher. Also highly customizable. [rofi](https://github.com/davatorium/rofi) is the other popular alternative and extremely customizable.
+A progam launcher is needed as well. [d-menu](https://github.com/stilvoid/dmenu) is a very popular program launcher, also highly customizable. [rofi](https://github.com/davatorium/rofi) is the other popular alternative and extremely customizable.
 
-Having no full DE and only a WM means your background will be black. [Feh](https://github.com/derf/feh) is a program that can very easily set background images.
+Having no full DE and only a WM means your background will be black/empty. [Feh](https://github.com/derf/feh) is a program that can very easily set background images.
 
 Another essential program would be filemanagers. Some popular graphical filemanagers are [nautilus](https://github.com/GNOME/nautilus), [thunar](https://github.com/xfce-mirror/thunar).
 
