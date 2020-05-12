@@ -191,9 +191,15 @@ Some useful tips to get started:
 
 + Install [feh](https://github.com/derf/feh), a lightweight image viewer. Feh also sets wallpapers: `feh --bg-scale /path/to/image.file`
 
-+ Install [i3-lock](https://github.com/i3/i3lock) to use as lockscreen
++ Install [i3-lock](https://github.com/i3/i3lock) to use as lockscreen. A keybind to lock your screen can be added to i3 as such:
+    ```
+    bindsym $mod+F1 exec --no-startup-id i3lock -i ~/path/to/image.png -p default -n
 
-+ Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc)
+    ```
+    My lockscreen: ![lock-screen](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/lock-screen.png)
+    To unlock, simply start typing the password and press `Enter`
+
++ Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc). Example image for Dunst ![dunst](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/dunst-notification.png)
 
 ## Forums 
 List of some forums to help with questions and customizations:
