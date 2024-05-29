@@ -17,35 +17,37 @@ Packages and programs mentioned here are available for all linux distros. The co
 As the name implies, a WM is a software that manages the placement and movements of windows. Nothing more.
 
 Some of the different kinds of WM are: 
-+ Stacking WM: allow for overlapping floating windows. Some examples of stacking WM are:
-    + [cwm](https://github.com/mariusae/cwm)
-    + [2bwm](https://github.com/venam/2bwm)
-+ Tiling WM: windows are opened in full screen more. Every subsequent window splits the screen space. Some of the popular tiling WM are:
-    + [i3](https://github.com/i3/i3) and it's various forks
-    + [bspwm](https://github.com/baskerville/bspwm)
-    + [herbsluftwm](https://github.com/herbstluftwm/herbstluftwm)
-+ Dynamic WM: dynamically change between tiling and floating modes. Some of the popular dynamic WM are:
-    + [awesome](https://github.com/awesomeWM/awesome)
-    + [dwm](https://github.com/hluk/dwm)
-    + [spectrwm](https://github.com/conformal/spectrwm)
-+ Composite WM: all windows are drawn and buffered individually with additonal effects such as 3D animations, blurr, fading etc. Some of the popular composite WM are:
-    + Windows WM
-    + OS X WM
+- Stacking WM: allow for overlapping floating windows. Some examples of stacking WM are:
+  - [cwm](https://github.com/mariusae/cwm)
+  - [2bwm](https://github.com/venam/2bwm)
+- Tiling WM: windows are opened in full screen more. Every subsequent window splits the screen space. Some of the popular tiling WM are:
+  - [i3](https://github.com/i3/i3) and it's various forks
+  - [bspwm](https://github.com/baskerville/bspwm)
+  - [herbsluftwm](https://github.com/herbstluftwm/herbstluftwm)
+- Dynamic WM: dynamically change between tiling and floating modes. Some of the popular dynamic WM are:
+  - [awesome](https://github.com/awesomeWM/awesome)
+  - [dwm](https://github.com/hluk/dwm)
+  - [spectrwm](https://github.com/conformal/spectrwm)
+- Composite WM: all windows are drawn and buffered individually with additonal effects such as 3D animations, blurr, fading etc. Some of the popular composite WM are:
+  - Windows WM
+  - OS X WM
 
 We will be focusing on tiling WM here, in particular [i3-wm](https://github.com/i3/i3) and it's forks.
 It is very minimal and does not come with any added modules. All further configuration is left to the user's discretion.
 
 
-## Difference between **D**esktop **E**nvironment(DE) and WM
+## Difference between **D**esktop **E**nvironment (DE) and **W**indow **M**anager (WM)
 
 A full DE comes with a WM and other modules like a network manager, filemanager and so on.
 
 A WM however lacks such modules and typically is only capable of handling window placements for the most part.
 
 Some distros come with full Desktop Experiences by default. For example:
-+ [Ubuntu](https://ubuntu.com/) and [Fedora](https://getfedora.org/) come with [Gnome DE](https://www.gnome.org/).
-+ [Elementary OS](https://elementary.io/) comes with [Pantheon DE](https://wiki.archlinux.org/index.php/Pantheon).
-+ [Linux Mint](https://www.linuxmint.com/) comes with [KDE](https://kde.org/).
+- [CachyOS](https://cachyos.org/) and [KDE Neon](https://neon.kde.org/) come with [KDE](https://kde.org/).
+- [Elementary OS](https://elementary.io/) comes with [Pantheon DE](https://wiki.archlinux.org/index.php/Pantheon).
+- [Fedora](https://getfedora.org/), [Ubuntu](https://ubuntu.com/) and [Zorin OS](https://zorin.com/) come with [Gnome DE](https://www.gnome.org/).
+- [Linux Mint](https://www.linuxmint.com/) comes with [Cinnamon](https://projects.linuxmint.com/cinnamon/).
+- [Xubuntu](https://xubuntu.org/) comes with [XFCE](https://xfce.org/).
 
 Distros like [Arch](https://www.archlinux.org/) however come with no GUI. It is left upto the user to choose and install what they please.
 
@@ -55,15 +57,15 @@ An extensive list of WM is available on the [archwiki](https://wiki.archlinux.or
 ## My setup
 
 After having extensively used Ubuntu 18.04, I changed over to my current setup: 
-+ *Arch OS* 
-+ *i3-gaps WM*
-+ *lightDM* - Display Manager
-+ *Polybar* - Bar to show different information
-+ *Rofi* - Program launcher
-+ *Nautilus* - GUI filemanager
-+ *Ranger* - Terminal filemanager
-+ *Dunst* - Notification daemon
-+ *i3-lock* - for lockscreen
+- *Arch OS* 
+- *i3-gaps WM*
+- *lightDM* - Display Manager
+- *Polybar* - Bar to show different information
+- *Rofi* - Program launcher
+- *Nautilus* - GUI filemanager
+- *Ranger* - Terminal filemanager
+- *Dunst* - Notification daemon
+- *i3-lock* - for lockscreen
 
 
 ## Installation
@@ -71,8 +73,8 @@ After having extensively used Ubuntu 18.04, I changed over to my current setup:
 After having installed the desired OS, (Links top get started with installing [Arch](https://wiki.archlinux.org/index.php/Installation_guide) and [Ubuntu](https://ubuntu.com/desktop)) open up the terminal. On arch you are already on the terminal after a fresh install. On Ubuntu you can either press `Ctrl + Alt + Enter` or simply open it from the Gnome App launcher.
 
 To install i3-gaps simply enter:
-+ on Arch: `sudo pacman -S i3-gaps`
-+ on Ubuntu i3-gaps first need some dependencies and then it is installed from source
+- on Arch: `sudo pacman -S i3-gaps`
+- on Ubuntu i3-gaps first need some dependencies and then it is installed from source
 ```
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool libxcb-shape0-dev 
 ```
@@ -122,13 +124,13 @@ set $mod Mod<num>
 
 Some common and default shortcuts to get started with are:
 
-+ Open terminal: `Mod + enter`
-+ Open dmenu: `Mod + d`
-+ Reload i3 config: `Mod + shift + r`
-+ Closing windows: `Mod + shift + q`
-+ Switching to Workspace: `Mod + <num>`
-+ Shifting window to Workspace: `Mod + shift + <num>`
-+ Toogle window to floating: `MOD + shift + space`
+- Open terminal: `Mod + enter`
+- Open dmenu: `Mod + d`
+- Reload i3 config: `Mod + shift + r`
+- Closing windows: `Mod + shift + q`
+- Switching to Workspace: `Mod + <num>`
+- Shifting window to Workspace: `Mod + shift + <num>`
+- Toogle window to floating: `MOD + shift + space`
 
 All these shortcuts can be customized by editing `.config/i3/config`
 
@@ -146,34 +148,34 @@ Default i3 config looks like [this](https://gist.github.com/Brutuski/91e5a861edf
 My i3 config file is linked [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/i3_config) as well.
 
 Some useful tips to get started:
-+ To comment out a line, type `#` before it.
+- To comment out a line, type `#` before it.
 
-+ To set a custom keybinding
+- To set a custom keybinding
     ```
     bindsym $mod+z exec <program name>
     ```
-+ To always execute a custom script on startup, starting polybar for example 
+- To always execute a custom script on startup, starting polybar for example 
     ```
     exec_always --no-startup-id $HOME/.config/polybar/launch.sh
     ```
-+ To switch between multiple keyboard layouts, US and German for example (necessary drivers required)
+- To switch between multiple keyboard layouts, US and German for example (necessary drivers required)
     ```
     exec_always setxkbmap -layout us,de
     ```
-+ To start a particular program in floating mode always
+- To start a particular program in floating mode always
     ```
     for_window [class="<program_name"] floating enable
     ```
 
 ## How to procede further
 
-+ Install polybar to show information from various modules. A lot more modules for it can be found [here](https://github.com/TiagoDanin/Awesome-Polybar) and [here](https://github.com/polybar/polybar-scripts). Polybar can be customized with various themes and color schemes as per the user's setup. 
+- Install polybar to show information from various modules. A lot more modules for it can be found [here](https://github.com/TiagoDanin/Awesome-Polybar) and [here](https://github.com/polybar/polybar-scripts). Polybar can be customized with various themes and color schemes as per the user's setup. 
     + Example bars: 
     ![bar1](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/bar1.png)
 
         ![bar2](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/bar2.png)
 
-+ Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). 
+- Install Rofi to launch programs. Rofi's look and functions can be customized by editing the config (located at `.config/rofi/config`). 
 
     My rofi setup: 
 
@@ -189,9 +191,9 @@ Some useful tips to get started:
 
     Scripts for [Powermenu](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/powermenu.sh) and [Window Switcher](https://github.com/Brutuski/linux-wm-guide/blob/f79244aa6e1657fa82a6c4bbbd0cdad5a70c35e5/.configs/i3_config#L47) are linked as well to get started with.
 
-+ Install [feh](https://github.com/derf/feh), a lightweight image viewer. Feh also sets wallpapers: `feh --bg-scale /path/to/image.file`
+- Install [feh](https://github.com/derf/feh), a lightweight image viewer. Feh also sets wallpapers: `feh --bg-scale /path/to/image.file`
 
-+ Install [i3-lock](https://github.com/i3/i3lock) to use as lockscreen. A keybind to lock your screen can be added to i3 as such:
+- Install [i3-lock](https://github.com/i3/i3lock) to use as lockscreen. A keybind to lock your screen can be added to i3 as such:
     ```
     bindsym $mod+F1 exec --no-startup-id i3lock -i ~/path/to/image.png -p default -n
 
@@ -202,14 +204,14 @@ Some useful tips to get started:
     
     To unlock, simply start typing the password and press `Enter`
 
-+ Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc). Example image for Dunst 
+- Install [Dunst](https://github.com/dunst-project/dunst) to be use as a notification daemon. Dunst is highly configurable and lightweight. My config is included [here](https://github.com/Brutuski/linux-wm-guide/blob/master/.configs/dunstrc). Example image for Dunst 
 
     ![dunst](https://raw.githubusercontent.com/Brutuski/linux-wm-guide/master/.image_resources/dunst-notification.png)
 
 ## Forums 
 List of some forums to help with questions and customizations:
-+ [i3 subreddit](https://wwwreddit.com/r/i3wm/), also serves as the official i3 forum.
-+ [Customizations subreddit](https://www.reddit.com/r/unixporn/)
+- [i3 subreddit](https://wwwreddit.com/r/i3wm/), also serves as the official i3 forum.
+- [Customizations subreddit](https://www.reddit.com/r/unixporn/)
 
 ### Disclaimer
 
